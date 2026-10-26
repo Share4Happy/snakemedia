@@ -25,6 +25,14 @@
   display: inline-block;
 }
 
+.footer-brand-logo-img {
+  height: 56px;
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer-contact-heading {
   font-size: 1.35rem;
   font-weight: 800;

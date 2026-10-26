@@ -10,7 +10,7 @@ Mọi hình ảnh tĩnh sẽ được khai báo tập trung tại `src/scripts/i
 
 | STT | Tên file dự kiến | Vị trí sử dụng | Kích thước đề xuất (px) | Tỷ lệ (Aspect Ratio) | Alt Text dự kiến | Trạng thái | Ghi chú |
 |:---:|:---|:---|:---:|:---:|:---|:---:|:---|
-| **01** | `logo-snakemedia.svg` (hoặc `.png`) | Header & Footer | 180 x 50 | ~3.6:1 | Logo SnakeMedia - Creative Media Team | **Còn thiếu** | Chữ SnakeMedia kèm biểu tượng ống kính máy ảnh |
+| **01** | `logo-snakemedia.png` / `.webp` | Header & Footer | 600 x 283 (hiển thị 180x44) | ~2.1:1 | Logo SnakeMedia - Creative Media Team | **Đã hoàn thiện** | Đã tách nền trong suốt từ logo gốc, khử viền trắng anti-aliasing |
 | **02** | `hero-grid-1.jpg` | Hero Collage (Trên trái) | 260 x 200 | ~4:3 | Nhóm thành viên SnakeMedia trẻ trung, năng động | **Còn thiếu** | Thẻ ảnh bo góc trắng, nghiêng nhẹ |
 | **03** | `hero-grid-2.jpg` | Hero Collage (Trên phải) | 260 x 200 | ~4:3 | Đội ngũ quay phim SnakeMedia tác nghiệp với máy quay chuyên dụng | **Còn thiếu** | Thẻ ảnh bo góc trắng |
 | **04** | `hero-grid-3.jpg` | Hero Collage (Dưới trái) | 260 x 200 | ~4:3 | Kỹ thuật viên quay phim SnakeMedia trong sự kiện | **Còn thiếu** | Thẻ ảnh bo góc trắng |
