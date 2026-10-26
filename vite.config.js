@@ -48,13 +48,9 @@ function htmlIncludePlugin() {
 
 export default defineConfig(({ command }) => {
   // During local development, serve at root '/'
-  // During production build, use repo name for GitHub Pages, or relative './'
-  const repoName = process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
-    : (process.env.VITE_BASE || './');
-
+  // During production build, use relative './' so assets load properly on both custom domains and GitHub Pages subpaths
   return {
-    base: command === 'serve' ? '/' : repoName,
+    base: command === 'serve' ? '/' : './',
     plugins: [htmlIncludePlugin()],
     server: {
       port: 5173,
