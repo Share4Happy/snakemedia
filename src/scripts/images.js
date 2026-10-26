@@ -7,7 +7,7 @@
  */
 
 // Tự động quét các ảnh có trong src/assets/images/ (Vite eager glob)
-const localImageModules = import.meta.glob('../assets/images/*.{jpg,jpeg,png,webp,svg}', {
+const localImageModules = import.meta.glob('../assets/images/**/*.{jpg,jpeg,png,webp,svg}', {
   eager: true,
   import: 'default'
 });

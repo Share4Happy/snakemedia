@@ -9,42 +9,42 @@ const DEFAULT_POSTS = [
     id: 'mock-1',
     title: 'Bắt đầu một kế hoạch nội dung từ đâu?',
     excerpt: 'Từ mục tiêu thương hiệu đến lịch đăng thực tế: vài bước đơn giản để biến ý tưởng rời rạc thành kế hoạch dễ triển khai.',
-    imageUrl: '/src/assets/images/post-1.jpg',
+    imageUrl: '/src/assets/images/posts/post-1.jpg',
     url: 'https://share4happy.com'
   },
   {
     id: 'mock-2',
     title: 'Kể chuyện thương hiệu bằng video ngắn',
     excerpt: 'Một video hiệu quả không chỉ đẹp mắt mà còn cần thông điệp rõ ràng, nhịp dựng phù hợp và lời kêu gọi hành động tự nhiên.',
-    imageUrl: '/src/assets/images/post-2.jpg',
+    imageUrl: '/src/assets/images/posts/post-2.jpg',
     url: 'https://share4happy.com'
   },
   {
     id: 'mock-3',
     title: 'Giữ hình ảnh nhất quán trên mạng xã hội',
     excerpt: 'Màu sắc, bố cục và giọng nói thương hiệu cùng tạo nên dấu ấn giúp người xem nhận ra bạn qua từng bài đăng.',
-    imageUrl: '/src/assets/images/post-3.jpg',
+    imageUrl: '/src/assets/images/posts/post-3.jpg',
     url: 'https://share4happy.com'
   },
   {
     id: 'mock-4',
     title: 'Biến ý tưởng thành nội dung nhất quán',
     excerpt: 'Một quy trình rõ ràng giúp thương hiệu duy trì nhịp sáng tạo và phối hợp hiệu quả qua từng nội dung.',
-    imageUrl: '/src/assets/images/post-4.jpg',
+    imageUrl: '/src/assets/images/posts/post-4.jpg',
     url: 'https://share4happy.com'
   },
   {
     id: 'mock-5',
     title: 'Tối ưu hóa chi phí sản xuất media cho doanh nghiệp nhỏ',
     excerpt: 'Cách cân đối ngân sách, lựa chọn hạng mục ưu tiên và đo lường hiệu quả chuyển đổi từ các ấn phẩm truyền thông thực chiến.',
-    imageUrl: '/src/assets/images/post-5.jpg',
+    imageUrl: '/src/assets/images/posts/post-5.jpg',
     url: 'https://share4happy.com'
   },
   {
     id: 'mock-6',
     title: 'Xây dựng bộ nhận diện số đa nền tảng cho thương hiệu',
     excerpt: 'Định hình phong cách thị giác độc bản từ màu sắc, kiểu chữ đến bố cục ấn phẩm truyền thông trên TikTok, Facebook và Reels.',
-    imageUrl: '/src/assets/images/post-1.jpg',
+    imageUrl: '/src/assets/images/posts/post-1.jpg',
     url: 'https://share4happy.com'
   }
 ];
@@ -86,7 +86,7 @@ function createCardElement(post) {
   mediaWrap.className = 'post-card-media';
 
   const img = document.createElement('img');
-  img.src = post.imageUrl || '/src/assets/images/post-1.jpg';
+  img.src = post.imageUrl || '/src/assets/images/posts/post-1.jpg';
   img.alt = post.title;
   img.className = 'post-card-img';
   img.loading = 'lazy';
@@ -274,7 +274,7 @@ export async function initPostsSection() {
           }
           // Nếu không có ảnh, dùng luân phiên các ảnh mockup đã tạo
           if (!imageUrl) {
-            const fallbackImgs = ['/src/assets/images/post-1.jpg', '/src/assets/images/post-2.jpg', '/src/assets/images/post-3.jpg', '/src/assets/images/post-4.jpg'];
+            const fallbackImgs = ['/src/assets/images/posts/post-1.jpg', '/src/assets/images/posts/post-2.jpg', '/src/assets/images/posts/post-3.jpg', '/src/assets/images/posts/post-4.jpg'];
             imageUrl = fallbackImgs[idx % fallbackImgs.length];
           }
 
