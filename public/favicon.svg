@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B2055"/>
+      <stop offset="100%" stop-color="#040D24"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  <!-- Camera lens body -->
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.3"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="url(#lensGrad)" stroke-width="4"/>
+  <!-- Snake S swirl in center -->
+  <path d="M 27 24 C 27 20, 37 20, 37 26 C 37 32, 27 32, 27 38 C 27 44, 37 44, 37 40" fill="none" stroke="#FDB813" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

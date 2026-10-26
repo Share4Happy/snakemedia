@@ -1,0 +1,185 @@
+/* UI Components & Shared Patterns */
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8125rem 1.625rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primary Button (Yellow) */
+.btn-primary {
+  background-color: var(--color-accent-yellow);
+  color: #0B1938;
+  box-shadow: var(--shadow-btn-yellow);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(253, 184, 19, 0.45);
+}
+
+/* Secondary Button (Navy Glass / Bordered) */
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-white);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Arrow Icon inside button */
+.btn-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translate(2px, -2px);
+}
+
+.btn:hover .btn-arrow-right {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Pills & Badges
+   ========================================================================== */
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-yellow);
+  color: #0F172A;
+  box-shadow: 0 2px 8px rgba(253, 184, 19, 0.25);
+  transition: transform var(--transition-fast);
+}
+
+.pill-tag:hover {
+  transform: translateY(-2px);
+}
+
+/* Number Badges (01, 02, 03 on Cards) */
+.card-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  background-color: #EBF0F8;
+  color: #5B729E;
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.25rem;
+}
+
+/* ==========================================================================
+   "Khung trước, ảnh sau" - Placeholder chung (.img-placeholder)
+   ========================================================================== */
+.img-placeholder {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(230, 237, 247, 0.8) 0%, rgba(215, 225, 240, 0.6) 100%);
+  color: #64748B;
+  overflow: hidden;
+  border-radius: inherit;
+  transition: opacity var(--transition-base);
+}
+
+/* On dark backgrounds */
+.theme-dark .img-placeholder {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.03) 100%);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.img-placeholder svg {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.6;
+  margin-bottom: 0.35rem;
+}
+
+.img-placeholder-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 0 0.5rem;
+  opacity: 0.8;
+}
+
+/* When real image loads inside */
+.img-loaded {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* ==========================================================================
+   Skeleton Loading State for API
+   ========================================================================== */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 25%, rgba(255, 255, 255, 0.14) 50%, rgba(255, 255, 255, 0.06) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ==========================================================================
+   Notice Bar (Section 04 Bottom)
+   ========================================================================== */
+.notice-box {
+  background-color: #FFFFFF;
+  color: #1E293B;
+  border-radius: var(--radius-md);
+  padding: 1.125rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  border-left: 5px solid var(--color-accent-yellow);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.notice-box strong {
+  color: #0F172A;
+  font-weight: 800;
+}

@@ -1,0 +1,92 @@
+<!-- Section 11: Bài đăng (Những câu chuyện truyền thông nổi bật) -->
+<section class="posts-section" id="posts" aria-labelledby="posts-heading">
+  <div class="container">
+    <div class="posts-header-wrap">
+      <div class="posts-header-text">
+        <span class="section-eyebrow">11 / BÀI ĐĂNG</span>
+        <h2 class="section-heading" id="posts-heading">Những câu chuyện truyền thông nổi bật</h2>
+      </div>
+
+      <!-- Navigation & Pagination Controls (Hiển thị khi tổng số bài viết > 4) -->
+      <div class="posts-nav-controls" id="posts-nav-controls" aria-label="Điều hướng phân trang bài viết">
+        <span class="posts-page-indicator" id="posts-page-indicator" aria-live="polite">Trang 1 / 2</span>
+        <div class="posts-nav-buttons">
+          <button type="button" class="posts-nav-btn posts-nav-prev" id="posts-nav-prev" aria-label="Xem trang trước" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button type="button" class="posts-nav-btn posts-nav-next" id="posts-nav-next" aria-label="Xem trang tiếp theo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2x2 Grid Container -->
+    <div class="posts-grid-container">
+      <div class="posts-grid" id="posts-grid" role="list">
+        <!-- Card 1 -->
+        <article class="post-card" role="listitem">
+          <a href="https://share4happy.com" target="_blank" rel="noopener noreferrer" class="post-card-inner">
+            <div class="post-card-media">
+              <img src="/src/assets/images/post-1.jpg" alt="Bắt đầu một kế hoạch nội dung từ đâu?" class="post-card-img" loading="lazy" />
+            </div>
+            <div class="post-card-content">
+              <h3 class="post-card-title">Bắt đầu một kế hoạch nội dung từ đâu?</h3>
+              <p class="post-card-desc">Từ mục tiêu thương hiệu đến lịch đăng thực tế: vài bước đơn giản để biến ý tưởng rời rạc thành kế hoạch dễ triển khai.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="post-card" role="listitem">
+          <a href="https://share4happy.com" target="_blank" rel="noopener noreferrer" class="post-card-inner">
+            <div class="post-card-media">
+              <img src="/src/assets/images/post-2.jpg" alt="Kể chuyện thương hiệu bằng video ngắn" class="post-card-img" loading="lazy" />
+            </div>
+            <div class="post-card-content">
+              <h3 class="post-card-title">Kể chuyện thương hiệu bằng video ngắn</h3>
+              <p class="post-card-desc">Một video hiệu quả không chỉ đẹp mắt mà còn cần thông điệp rõ ràng, nhịp dựng phù hợp và lời kêu gọi hành động tự nhiên.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="post-card" role="listitem">
+          <a href="https://share4happy.com" target="_blank" rel="noopener noreferrer" class="post-card-inner">
+            <div class="post-card-media">
+              <img src="/src/assets/images/post-3.jpg" alt="Giữ hình ảnh nhất quán trên mạng xã hội" class="post-card-img" loading="lazy" />
+            </div>
+            <div class="post-card-content">
+              <h3 class="post-card-title">Giữ hình ảnh nhất quán trên mạng xã hội</h3>
+              <p class="post-card-desc">Màu sắc, bố cục và giọng nói thương hiệu cùng tạo nên dấu ấn giúp người xem nhận ra bạn qua từng bài đăng.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="post-card" role="listitem">
+          <a href="https://share4happy.com" target="_blank" rel="noopener noreferrer" class="post-card-inner">
+            <div class="post-card-media">
+              <img src="/src/assets/images/post-4.jpg" alt="Biến ý tưởng thành nội dung nhất quán" class="post-card-img" loading="lazy" />
+            </div>
+            <div class="post-card-content">
+              <h3 class="post-card-title">Biến ý tưởng thành nội dung nhất quán</h3>
+              <p class="post-card-desc">Một quy trình rõ ràng giúp thương hiệu duy trì nhịp sáng tạo và phối hợp hiệu quả qua từng nội dung.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom Pagination Dots & Numbers -->
+    <div class="posts-pagination-wrap" id="posts-pagination-wrap">
+      <div class="posts-dots" id="posts-dots" role="tablist" aria-label="Chọn trang bài viết">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>

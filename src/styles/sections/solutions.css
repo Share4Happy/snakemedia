@@ -1,0 +1,94 @@
+/* Section 03: Giải pháp từ nhóm sinh viên (Our Solutions) */
+.solutions-section {
+  position: relative;
+  background-color: var(--color-accent-yellow-bg);
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.solutions-header {
+  margin-bottom: 3.5rem;
+  max-width: 780px;
+}
+
+.solutions-header .section-eyebrow {
+  color: #554100;
+}
+
+.solutions-header .section-heading {
+  color: #0F172A;
+}
+
+.solutions-header .section-subheading {
+  color: #2D3748;
+}
+
+/* 3 Cards Grid with Images */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.solution-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 16px 36px rgba(130, 95, 0, 0.14);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(130, 95, 0, 0.22);
+}
+
+.solution-card-top {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.solution-card .card-num-badge {
+  background-color: #EEF3FA;
+  color: #38507E;
+  margin-bottom: 0;
+}
+
+/* Card Image Frame */
+.solution-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #E2E8F0;
+}
+
+.solution-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.solution-card-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #4A5568;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .solutions-header {
+    margin-bottom: 2.5rem;
+  }
+}

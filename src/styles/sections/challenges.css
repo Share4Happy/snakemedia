@@ -1,0 +1,78 @@
+/* Section 02: Khó khăn khách hàng (Customer Challenges) */
+.challenges-section {
+  position: relative;
+  background: var(--color-challenges-gradient);
+  color: var(--color-text-white);
+  padding: var(--section-padding-y) 0;
+}
+
+.challenges-header {
+  margin-bottom: 3.5rem;
+  max-width: 720px;
+}
+
+.challenges-header .section-eyebrow {
+  color: var(--color-accent-yellow);
+}
+
+.challenges-header .section-heading {
+  color: #FFFFFF;
+}
+
+.challenges-header .section-subheading {
+  color: #C0D3FA;
+}
+
+/* 3 Cards Grid */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.challenge-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  color: var(--color-text-dark);
+  box-shadow: 0 16px 36px rgba(5, 18, 56, 0.22);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.challenge-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(5, 18, 56, 0.35);
+}
+
+.challenge-card .card-num-badge {
+  background-color: #EEF3FA;
+  color: #4A6394;
+}
+
+.challenge-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+}
+
+.challenge-card-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #556987;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .challenges-header {
+    margin-bottom: 2.5rem;
+  }
+}

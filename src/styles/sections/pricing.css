@@ -1,0 +1,152 @@
+/* Section 06: Chọn Gói Dịch Vụ Phù Hợp (Bảng Giá / Packages) */
+.pricing-section {
+  position: relative;
+  background: linear-gradient(180deg, #ADC9FF 0%, #D8E5FF 50%, #F0F4FF 100%);
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.pricing-header {
+  margin-bottom: 3.5rem;
+  max-width: 760px;
+}
+
+.pricing-header .section-eyebrow {
+  color: #B27B08;
+}
+
+.pricing-header .section-heading {
+  color: #0F172A;
+}
+
+.pricing-header .section-subheading {
+  color: #334155;
+}
+
+/* 3 Packages Cards Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.pricing-card {
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Card 1 & 3: White Cards */
+.pricing-card-light {
+  background-color: #FFFFFF;
+  color: var(--color-text-dark);
+  box-shadow: 0 16px 36px rgba(11, 34, 93, 0.08);
+}
+
+.pricing-card-light:hover {
+  box-shadow: 0 24px 48px rgba(11, 34, 93, 0.16);
+}
+
+/* Card 2: Featured Navy Card */
+.pricing-card-featured {
+  background-color: #0B225D;
+  color: #FFFFFF;
+  box-shadow: 0 24px 50px rgba(11, 34, 93, 0.28);
+}
+
+.pricing-card-featured:hover {
+  box-shadow: 0 32px 60px rgba(11, 34, 93, 0.4);
+}
+
+.pricing-tag {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.pricing-card-light .pricing-tag {
+  color: #C08A0E;
+}
+
+.pricing-card-featured .pricing-tag {
+  color: var(--color-accent-yellow);
+}
+
+.pricing-card-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.pricing-card-light .pricing-card-title {
+  color: #0F172A;
+}
+
+.pricing-card-featured .pricing-card-title {
+  color: #FFFFFF;
+}
+
+.pricing-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 3rem;
+  flex-grow: 1;
+}
+
+.pricing-feature-item {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.pricing-card-light .pricing-feature-item {
+  color: #475569;
+}
+
+.pricing-card-featured .pricing-feature-item {
+  color: #D2E0FF;
+}
+
+/* Action Button at bottom of card */
+.pricing-card-btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.pricing-btn-navy {
+  background-color: #0B225D;
+  color: #FFFFFF;
+}
+
+.pricing-btn-navy:hover {
+  background-color: #071740;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(11, 34, 93, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    padding: 2.25rem 1.75rem 2rem;
+  }
+}

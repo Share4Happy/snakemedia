@@ -1,0 +1,131 @@
+/* Section 05.1: Project Planning (Quy trình làm việc) */
+.planning-section {
+  position: relative;
+  background: linear-gradient(180deg, #F8FAFD 0%, #FFFFFF 100%);
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.planning-header {
+  margin-bottom: 3.5rem;
+  max-width: 780px;
+}
+
+.planning-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.planning-header .section-heading {
+  color: #0F172A;
+}
+
+.planning-header .section-subheading {
+  color: #475569;
+}
+
+/* 4 Process Cards Grid */
+.planning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.planning-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.65rem;
+  box-shadow: 0 10px 25px rgba(11, 34, 93, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.planning-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(11, 34, 93, 0.12);
+}
+
+.planning-stage-badge {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #C08A0E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.planning-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+}
+
+.planning-card-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #64748B;
+}
+
+/* Bottom Callout Banner (Navy Card) */
+.planning-callout {
+  background-color: #0B225D;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 16px 36px rgba(11, 34, 93, 0.25);
+}
+
+.planning-callout-text {
+  max-width: 650px;
+}
+
+.planning-callout-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.planning-callout-desc {
+  font-size: 0.9375rem;
+  color: #B2C6ED;
+  line-height: 1.6;
+}
+
+.planning-callout-btn {
+  flex-shrink: 0;
+  padding: 0.85rem 1.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .planning-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .planning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planning-callout {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+  }
+
+  .planning-callout-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

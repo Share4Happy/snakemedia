@@ -1,0 +1,79 @@
+<!-- Section 11: Form Đăng ký tư vấn (Cùng bắt đầu dự án của bạn.) -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+  <div class="container contact-layout">
+    <!-- Left Column: Heading & Subtitle -->
+    <div class="contact-info-col">
+      <span class="section-eyebrow">12 / FORM ĐĂNG KÝ TƯ VẤN</span>
+      <h2 class="section-heading" id="contact-heading">
+        Cùng bắt đầu
+        <span class="contact-heading-highlight">dự án của bạn.</span>
+      </h2>
+      <p class="section-subheading">
+        Cho SnakeMedia biết nhu cầu, hạng mục mong muốn và thời gian dự kiến. Nhóm sẽ dựa trên thông tin này để trao đổi phương án phù hợp.
+      </p>
+    </div>
+
+    <!-- Right Column: Registration Form Card -->
+    <div class="contact-form-card">
+      <h3 class="form-card-title">Đăng ký tư vấn</h3>
+      <p class="form-card-desc">Điền thông tin cơ bản để nhóm hiểu rõ hơn về dự án.</p>
+
+      <form class="contact-form" novalidate>
+        <!-- Họ và tên -->
+        <div class="form-group">
+          <label for="client-name" class="form-label">Họ và tên</label>
+          <input
+            type="text"
+            id="client-name"
+            name="name"
+            class="form-input"
+            placeholder="Nhập họ tên"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <!-- Số điện thoại hoặc email -->
+        <div class="form-group">
+          <label for="client-contact" class="form-label">Số điện thoại hoặc email</label>
+          <input
+            type="text"
+            id="client-contact"
+            name="contact"
+            class="form-input"
+            placeholder="Cách liên hệ với bạn"
+            required
+            autocomplete="tel"
+          />
+        </div>
+
+        <!-- Bạn đang cần dịch vụ nào? -->
+        <div class="form-group">
+          <label for="client-service" class="form-label">Bạn đang cần dịch vụ nào?</label>
+          <input
+            type="text"
+            id="client-service"
+            name="service"
+            class="form-input"
+            placeholder="Ví dụ: quay video, thiết kế, content"
+          />
+        </div>
+
+        <button type="submit" class="btn form-submit-btn">
+          <span>Gửi yêu cầu tư vấn</span>
+          <span class="btn-arrow" aria-hidden="true">›</span>
+        </button>
+
+        <div class="form-status-message" role="alert" aria-live="assertive"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Academic Disclosure Strip at the bottom of the section -->
+  <div class="academic-disclosure-strip">
+    <p>
+      © 2026 SnakeMedia • Creative Media Team<br>
+      Trang web này được xây dựng cho môn học Tối ưu hóa công cụ tìm kiếm, sản phẩm thuộc nhóm sinh viên đại học Lạc Hồng
+    </p>
+  </div>
+</section>

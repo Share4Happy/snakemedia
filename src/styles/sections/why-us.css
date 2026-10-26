@@ -1,0 +1,74 @@
+/* Section 07: Why Choose Us (Vì sao chọn SnakeMedia?) */
+.why-us-section {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%);
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.why-us-header {
+  margin-bottom: 3.5rem;
+  max-width: 780px;
+}
+
+.why-us-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.why-us-header .section-heading {
+  color: #0F172A;
+}
+
+.why-us-header .section-subheading {
+  color: #475569;
+}
+
+/* 3 Cards Grid */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.why-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 14px 34px rgba(11, 34, 93, 0.07);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(11, 34, 93, 0.14);
+}
+
+.why-card .card-num-badge {
+  background-color: #EEF3FA;
+  color: #4A6394;
+}
+
+.why-card-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.why-card-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

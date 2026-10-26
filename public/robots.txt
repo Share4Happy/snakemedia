@@ -1,0 +1,6 @@
+# SnakeMedia Landing Page - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap URL
+Sitemap: https://username.github.io/snakemedia/sitemap.xml

@@ -1,0 +1,97 @@
+/* Section 09: Testimonials & Team (Con người đứng sau mỗi sản phẩm) */
+.team-section {
+  position: relative;
+  background-color: #F8FAFD;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.team-header {
+  margin-bottom: 3.5rem;
+  max-width: 780px;
+}
+
+.team-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.team-header .section-heading {
+  color: #0F172A;
+}
+
+.team-header .section-subheading {
+  color: #64748B;
+}
+
+/* 3 Team Focus Cards Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.team-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 14px 34px rgba(11, 34, 93, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(11, 34, 93, 0.12);
+}
+
+.team-card .card-num-badge {
+  background-color: #EEF3FA;
+  color: #4A6394;
+}
+
+.team-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.team-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #64748B;
+}
+
+/* Bottom Testimonial Note Card */
+.testimonial-note-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  box-shadow: 0 12px 30px rgba(11, 34, 93, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.testimonial-note-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-note-text {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

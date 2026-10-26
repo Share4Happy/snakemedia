@@ -1,0 +1,87 @@
+/* Section 10: FAQ (Một vài câu hỏi thường gặp) */
+.faq-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.faq-header .section-heading {
+  color: #0F172A;
+}
+
+/* Accordion Container */
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #E2E8F0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #E2E8F0;
+  transition: background-color var(--transition-fast);
+}
+
+.faq-item[open] {
+  background-color: #F8FAFD;
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1.35rem 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  cursor: pointer;
+  list-style: none; /* remove standard marker */
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  user-select: none;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary:hover {
+  color: #0B225D;
+  background-color: #F8FAFD;
+}
+
+.faq-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #0F172A;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+  margin-top: -1px;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(90deg);
+  color: #C08A0E;
+}
+
+.faq-content {
+  padding: 0 1rem 1.35rem calc(1rem + 1.6rem);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #475569;
+}

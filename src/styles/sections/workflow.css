@@ -1,0 +1,70 @@
+/* Section 08: Our Workflow (Quy trình làm việc 5 bước) */
+.workflow-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.workflow-header {
+  margin-bottom: 3.5rem;
+}
+
+.workflow-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.workflow-header .section-heading {
+  color: #0F172A;
+}
+
+/* 5 Steps Grid */
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem 1.5rem;
+}
+
+.workflow-step {
+  position: relative;
+  border-top: 4px solid var(--color-accent-yellow);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-num {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #94A3B8;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+.workflow-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+.workflow-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .workflow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .workflow-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

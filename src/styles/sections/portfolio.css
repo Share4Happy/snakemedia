@@ -1,0 +1,85 @@
+/* Section 05: Portfolio (Sản phẩm & Dự án thực tế) */
+.portfolio-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.portfolio-header {
+  margin-bottom: 3.5rem;
+  max-width: 720px;
+}
+
+.portfolio-header .section-eyebrow {
+  color: #C08A0E;
+}
+
+.portfolio-header .section-heading {
+  color: #0F172A;
+}
+
+/* 4 Cards (2x2 Grid) */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 2rem;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base);
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+}
+
+.portfolio-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #0B1736;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 30px rgba(11, 23, 54, 0.08);
+  margin-bottom: 1.25rem;
+  transition: box-shadow var(--transition-base);
+}
+
+.portfolio-card:hover .portfolio-card-media {
+  box-shadow: 0 20px 42px rgba(11, 23, 54, 0.16);
+}
+
+.portfolio-card-category {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #C08A0E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.portfolio-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.portfolio-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #64748B;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

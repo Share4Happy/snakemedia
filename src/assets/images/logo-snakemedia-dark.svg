@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" fill="none">
+  <defs>
+    <linearGradient id="lensGradSnakeDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Camera / Snake coil element -->
+  <g transform="translate(4, 2)">
+    <!-- Aperture ring -->
+    <circle cx="25" cy="25" r="23" stroke="url(#lensGradSnakeDark)" stroke-width="3" fill="#0B2055" fill-opacity="0.85"/>
+    <circle cx="25" cy="25" r="17" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.9"/>
+    <!-- Shutter blades -->
+    <path d="M 17 17 L 31 15 M 33 18 L 33 32 M 30 33 L 16 33 M 15 30 L 22 17" stroke="#00E5FF" stroke-width="1.2" opacity="0.8"/>
+    <!-- Snake S curve -->
+    <path d="M 22 17 C 22 12, 30 12, 30 18 C 30 23, 19 23, 19 29 C 19 35, 30 35, 30 31" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+    <!-- Lens flare highlight dot -->
+    <circle cx="34" cy="14" r="2" fill="#00E5FF"/>
+  </g>
+
+  <!-- Typography with dark text for light backgrounds -->
+  <!-- Snake -->
+  <text x="64" y="32" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="28" font-weight="900" fill="#0F275A" letter-spacing="-0.5">Snake</text>
+  <!-- -MEDIA- -->
+  <text x="66" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="9" font-weight="800" fill="#0284C7" letter-spacing="4">-MEDIA-</text>
+</svg>

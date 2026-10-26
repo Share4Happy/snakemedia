@@ -1,0 +1,117 @@
+/* Section 06.1: Deliverables (Bạn nhận được gì & Thông tin chuẩn bị) */
+.deliverables-section {
+  position: relative;
+  background-color: #F8FAFD;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+}
+
+.deliverables-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Left Column: Deliverables Checklist */
+.deliverables-info {
+  max-width: 620px;
+}
+
+.deliverables-info .section-eyebrow {
+  color: #C08A0E;
+}
+
+.deliverables-info .section-heading {
+  color: #0F172A;
+  margin-bottom: 0.85rem;
+}
+
+.deliverables-info .section-subheading {
+  color: #64748B;
+  margin-bottom: 2.25rem;
+}
+
+.deliverables-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem 1.5rem;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1E293B;
+  background-color: #FFFFFF;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(11, 34, 93, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.deliverable-check {
+  color: var(--color-accent-yellow);
+  font-size: 1rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* Right Column: Information Preparation Card */
+.prep-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2.25rem;
+  box-shadow: 0 16px 40px rgba(11, 34, 93, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.prep-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.5rem;
+}
+
+.prep-card-subtitle {
+  font-size: 0.875rem;
+  color: #64748B;
+  margin-bottom: 1.5rem;
+}
+
+.prep-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.prep-list li {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.prep-note {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #94A3B8;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .deliverables-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .deliverables-checklist-grid {
+    grid-template-columns: 1fr;
+  }
+}

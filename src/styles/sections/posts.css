@@ -1,0 +1,254 @@
+/* Section 11: Bài đăng (Những câu chuyện truyền thông nổi bật) */
+.posts-section {
+  position: relative;
+  background-color: #FFFFFF;
+  color: var(--color-text-dark);
+  padding: var(--section-padding-y) 0;
+  border-top: 1px solid #F1F5F9;
+}
+
+.posts-header-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.posts-header-text {
+  max-width: 650px;
+}
+
+.posts-header-text .section-eyebrow {
+  color: #C08A0E;
+  margin-bottom: 0.5rem;
+}
+
+.posts-header-text .section-heading {
+  color: #0F172A;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation & Pagination Controls (Top Right) */
+.posts-nav-controls {
+  display: none; /* Hiển thị qua JS khi số bài viết > 4 */
+  align-items: center;
+  gap: 1rem;
+}
+
+.posts-nav-controls.is-visible {
+  display: inline-flex;
+}
+
+.posts-page-indicator {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #64748B;
+  user-select: none;
+}
+
+.posts-nav-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.posts-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.posts-nav-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.posts-nav-btn:hover:not(:disabled) {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  border-color: #0F172A;
+  transform: translateY(-1px);
+}
+
+.posts-nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #E2E8F0;
+}
+
+/* 2x2 Grid Layout */
+.posts-grid-container {
+  position: relative;
+  width: 100%;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem 2rem;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.posts-grid.is-transitioning {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* Post Card Component */
+.post-card {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09);
+  border-color: #CBD5E1;
+}
+
+.post-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Media Thumbnail */
+.post-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #F1F5F9;
+}
+
+.post-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.post-card:hover .post-card-img {
+  transform: scale(1.035);
+}
+
+/* Card Content */
+.post-card-content {
+  padding: 1.75rem 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.post-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.35;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.015em;
+  transition: color var(--transition-fast);
+}
+
+.post-card:hover .post-card-title {
+  color: #103B9C;
+}
+
+.post-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Bottom Pagination Dots */
+.posts-pagination-wrap {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.posts-pagination-wrap.is-visible {
+  display: flex;
+}
+
+.posts-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.posts-dot-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #475569;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.posts-dot-btn:hover {
+  background-color: #F1F5F9;
+  color: #0F172A;
+  border-color: #94A3B8;
+}
+
+.posts-dot-btn.is-active {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  border-color: #0F172A;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .posts-header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+
+  .post-card-content {
+    padding: 1.35rem 1.5rem 1.65rem;
+  }
+
+  .post-card-title {
+    font-size: 1.2rem;
+  }
+}
