@@ -24,36 +24,36 @@ export const IMAGE_REGISTRY = {
     label: 'Logo SnakeMedia'
   },
 
-  // Hero Section Collage (4 ảnh)
+  // Hero Section Collage (4 ảnh thực tế từ dự án)
   heroGrid1: {
     fileName: 'hero-grid-1.jpg',
-    alt: 'Nhóm thành viên SnakeMedia trẻ trung, năng động',
+    alt: '3 thành viên SnakeMedia và khách mời check-in tại sự kiện sân khấu ngoài trời',
     aspectRatio: '4/3',
-    label: 'Ảnh: Nhóm thành viên'
+    label: 'Ảnh: Check-in sân khấu sự kiện'
   },
   heroGrid2: {
     fileName: 'hero-grid-2.jpg',
-    alt: 'Đội ngũ quay phim SnakeMedia tác nghiệp với máy quay chuyên dụng',
+    alt: '2 thành viên SnakeMedia điều khiển máy quay gimbal và màn hình monitor ban đêm',
     aspectRatio: '4/3',
-    label: 'Ảnh: Tác nghiệp máy quay'
+    label: 'Ảnh: Tác nghiệp máy quay gimbal'
   },
   heroGrid3: {
     fileName: 'hero-grid-3.jpg',
-    alt: 'Kỹ thuật viên quay phim SnakeMedia trong sự kiện',
+    alt: 'Các bạn nữ SnakeMedia rạng rỡ bên máy quay chân máy tại sân khấu hoàng hôn',
     aspectRatio: '4/3',
-    label: 'Ảnh: Kỹ thuật viên sự kiện'
+    label: 'Ảnh: Ekip bên máy quay sự kiện'
   },
   heroGrid4: {
     fileName: 'hero-grid-4.jpg',
-    alt: 'Nhiếp ảnh gia SnakeMedia ghi lại khoảnh khắc sự kiện',
+    alt: 'Ekip sinh viên SnakeMedia năng động giơ thẻ kỹ thuật sự kiện ngoài trời',
     aspectRatio: '4/3',
-    label: 'Ảnh: Nhiếp ảnh sự kiện'
+    label: 'Ảnh: Đội ngũ kỹ thuật sự kiện'
   },
 
   // Section 01: Về SnakeMedia
   aboutTeam: {
     fileName: 'about-team.jpg',
-    alt: 'Tập thể đội ngũ SnakeMedia tại sự kiện sân khấu',
+    alt: 'Đại gia đình thành viên SnakeMedia và ban tổ chức tại sân khấu đại nhạc hội đêm',
     aspectRatio: '620/420',
     label: 'Ảnh: Đội ngũ SnakeMedia'
   },
@@ -61,19 +61,19 @@ export const IMAGE_REGISTRY = {
   // Section 03: Giải pháp
   solutionIdea: {
     fileName: 'solution-idea.jpg',
-    alt: 'Lên ý tưởng và lập kế hoạch sản xuất media',
+    alt: 'Ekip SnakeMedia lên ý tưởng kịch bản và tác nghiệp quay phim phỏng vấn hiện trường',
     aspectRatio: '16/10',
     label: 'Ảnh: Lên ý tưởng & kế hoạch'
   },
   solutionProduction: {
     fileName: 'solution-production.jpg',
-    alt: 'Nhóm sinh viên sản xuất và hậu kỳ media',
+    alt: 'Chuẩn bị dàn dựng thiết bị sân khấu và máy quay chuyên dụng trên tripod',
     aspectRatio: '16/10',
     label: 'Ảnh: Sản xuất media'
   },
   solutionDigital: {
     fileName: 'solution-digital.jpg',
-    alt: 'Hỗ trợ nội dung số và tác nghiệp ban đêm',
+    alt: 'Vận hành bàn kỹ thuật điều khiển âm thanh, ánh sáng và tín hiệu số ban đêm',
     aspectRatio: '16/10',
     label: 'Ảnh: Hỗ trợ nội dung số'
   },
@@ -81,63 +81,63 @@ export const IMAGE_REGISTRY = {
   // Section 04: Gói Dịch vụ (6 mục)
   servicePhoto: {
     fileName: 'service-photo.jpg',
-    alt: 'Dịch vụ Nhiếp ảnh sự kiện SnakeMedia',
+    alt: 'Nữ kỹ thuật viên SnakeMedia tác nghiệp máy quay gimbal tại sân khấu rực rỡ ánh đèn',
     aspectRatio: '16/10',
     label: 'Ảnh: Nhiếp ảnh sự kiện'
   },
   serviceCreative: {
     fileName: 'service-creative.jpg',
-    alt: 'Dịch vụ Sáng tạo nội dung - Content Creative',
+    alt: 'Các thành viên SnakeMedia sáng tạo nội dung và chỉ đạo nghệ thuật trẻ trung',
     aspectRatio: '16/10',
     label: 'Ảnh: Content Creative'
   },
   serviceDesign: {
     fileName: 'service-design.jpg',
-    alt: 'Dịch vụ Thiết kế đồ họa nhận diện',
+    alt: 'Ekip SnakeMedia thảo luận thiết kế ấn phẩm và hậu kỳ media bên dàn máy tính',
     aspectRatio: '16/10',
     label: 'Ảnh: Thiết kế đồ họa'
   },
   serviceEdit: {
     fileName: 'service-edit.jpg',
-    alt: 'Dịch vụ Edit Video dựng phim chuyên nghiệp',
+    alt: 'Kiểm tra và dựng video kỹ lưỡng từng khung hình trên màn hình monitor',
     aspectRatio: '16/10',
     label: 'Ảnh: Edit Video'
   },
   serviceLivestream: {
     fileName: 'service-livestream.jpg',
-    alt: 'Dịch vụ Livestream chuyên nghiệp đa máy quay',
+    alt: 'Kỹ thuật viên tác nghiệp livestream tại đại nhạc hội Countdown hoành tráng',
     aspectRatio: '16/10',
     label: 'Ảnh: Live Stream'
   },
   serviceSocial: {
     fileName: 'service-social.jpg',
-    alt: 'Dịch vụ Phát triển và quản trị Social Media',
+    alt: 'Ekip sinh viên SnakeMedia năng động kết nối và phát triển mạng xã hội',
     aspectRatio: '16/10',
     label: 'Ảnh: Social Media'
   },
 
-  // Section 05: Portfolio
+  // Section 05: Portfolio (Case Studies thực tế)
   portfolioBeauty: {
     fileName: 'portfolio-beauty.jpg',
-    alt: 'Dự án truyền thông Thẩm mỹ - SnakeMedia',
+    alt: 'Kênh truyền thông Thẩm mỹ BLING KIM CLINIC - Dự án SnakeMedia',
     aspectRatio: '16/10',
     label: 'Ảnh: Dự án Thẩm mỹ'
   },
   portfolioEducation: {
     fileName: 'portfolio-education.jpg',
-    alt: 'Dự án truyền thông Giáo dục - SnakeMedia',
+    alt: 'Kênh truyền thông Giáo dục Thầy Sơn Chọn Ngành - Dự án SnakeMedia',
     aspectRatio: '16/10',
     label: 'Ảnh: Dự án Giáo dục'
   },
   portfolioFood: {
     fileName: 'portfolio-food.jpg',
-    alt: 'Dự án truyền thông F&B Ăn uống - SnakeMedia',
+    alt: 'Kênh truyền thông Ẩm thực F&B Ẩm Thực Chay Mộc - Dự án SnakeMedia',
     aspectRatio: '16/10',
     label: 'Ảnh: Dự án Ăn uống - F&B'
   },
   portfolioHealthcare: {
     fileName: 'portfolio-healthcare.jpg',
-    alt: 'Dự án truyền thông Sức khỏe - SnakeMedia',
+    alt: 'Kênh truyền thông Sức khỏe Nha khoa SP79 - Dự án SnakeMedia',
     aspectRatio: '16/10',
     label: 'Ảnh: Dự án Sức khỏe'
   }
