@@ -48,7 +48,7 @@
 }
 
 .about-eyebrow {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
   font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 0.12em;

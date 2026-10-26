@@ -7,9 +7,9 @@
   --color-challenges-gradient: linear-gradient(180deg, #102B6D 0%, #183C96 50%, #1F4AB7 100%);
   --color-services-gradient: linear-gradient(180deg, #123177 0%, #1B45A8 100%);
 
-  --color-accent-yellow: #FDB813;
-  --color-accent-yellow-hover: #E7A407;
-  --color-accent-yellow-bg: #F6BD26;
+  --color-accent-yellow: #ffc400;
+  --color-accent-yellow-hover: #e6b000;
+  --color-accent-yellow-bg: #ffc400;
   --color-bg-cream: #FBF8F2;
   --color-bg-card: #FFFFFF;
 
@@ -19,7 +19,8 @@
   --color-text-navy: #0B225D;
   --color-text-muted: #64748B;
   --color-text-light-muted: #B3C5EA;
-  --color-text-yellow-olive: #3E3002;
+  --color-text-yellow-olive: #a17a00;
+  --color-stage-gold: #a17a00;
 
   /* UI Borders & Accents */
   --color-border-light: rgba(255, 255, 255, 0.14);
@@ -42,7 +43,7 @@
   --shadow-card: 0 10px 30px -4px rgba(11, 34, 93, 0.08);
   --shadow-card-hover: 0 18px 42px -6px rgba(11, 34, 93, 0.16);
   --shadow-hero-card: 0 16px 36px -6px rgba(0, 0, 0, 0.35);
-  --shadow-btn-yellow: 0 6px 18px rgba(253, 184, 19, 0.32);
+  --shadow-btn-yellow: 0 6px 18px rgba(255, 196, 0, 0.35);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);

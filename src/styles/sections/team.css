@@ -12,7 +12,7 @@
 }
 
 .team-header .section-eyebrow {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
 }
 
 .team-header .section-heading {

@@ -75,7 +75,7 @@
 }
 
 .pricing-card-light .pricing-tag {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
 }
 
 .pricing-card-featured .pricing-tag {

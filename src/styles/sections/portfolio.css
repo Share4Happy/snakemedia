@@ -12,7 +12,7 @@
 }
 
 .portfolio-header .section-eyebrow {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
 }
 
 .portfolio-header .section-heading {
@@ -55,7 +55,7 @@
 .portfolio-card-category {
   font-size: 0.8125rem;
   font-weight: 800;
-  color: #C08A0E;
+  color: var(--color-stage-gold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.35rem;

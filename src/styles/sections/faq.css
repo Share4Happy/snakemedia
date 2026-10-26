@@ -15,7 +15,7 @@
 }
 
 .faq-header .section-eyebrow {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
 }
 
 .faq-header .section-heading {
@@ -76,7 +76,7 @@
 
 .faq-item[open] .faq-icon {
   transform: rotate(90deg);
-  color: #C08A0E;
+  color: var(--color-stage-gold);
 }
 
 .faq-content {

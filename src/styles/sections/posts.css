@@ -21,7 +21,7 @@
 }
 
 .posts-header-text .section-eyebrow {
-  color: #C08A0E;
+  color: var(--color-stage-gold);
   margin-bottom: 0.5rem;
 }
 

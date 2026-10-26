@@ -12,7 +12,7 @@
 }
 
 .solutions-header .section-eyebrow {
-  color: #554100;
+  color: var(--color-stage-gold);
 }
 
 .solutions-header .section-heading {
