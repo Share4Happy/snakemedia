@@ -50,7 +50,7 @@ const DEFAULT_POSTS = [
 ];
 
 const PAGE_SIZE = 4;
-let allPosts = [...DEFAULT_POSTS];
+let allPosts = []; // Bắt đầu với mảng rỗng, chờ load từ API
 let currentPage = 0;
 let isTransitioning = false;
 
@@ -114,6 +114,34 @@ function createCardElement(post) {
 }
 
 /**
+ * Hiển thị UI "Chưa có bài viết"
+ */
+function renderEmptyState() {
+  const grid = document.getElementById('posts-grid');
+  const navControls = document.getElementById('posts-nav-controls');
+  const paginationWrap = document.getElementById('posts-pagination-wrap');
+
+  if (!grid) return;
+
+  // Ẩn phân trang
+  if (navControls) navControls.classList.remove('is-visible');
+  if (paginationWrap) paginationWrap.classList.remove('is-visible');
+
+  // Hiển thị thông báo "chưa có bài viết"
+  grid.innerHTML = `
+    <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1.5rem; opacity: 0.3;">
+        <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"/>
+        <path d="M9 10H15"/>
+        <path d="M9 14H15"/>
+      </svg>
+      <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #1a1a1a;">Chưa có bài viết</h3>
+      <p style="color: #666; font-size: 0.95rem;">Các bài viết mới sẽ được cập nhật sớm. Hãy quay lại sau nhé!</p>
+    </div>
+  `;
+}
+
+/**
  * Hiển thị trang bài viết hiện tại
  * @param {number} pageIndex 
  */
@@ -127,6 +155,12 @@ function renderPage(pageIndex) {
   const paginationWrap = document.getElementById('posts-pagination-wrap');
 
   if (!grid) return;
+
+  // Nếu không có bài viết nào, hiển thị empty state
+  if (allPosts.length === 0) {
+    renderEmptyState();
+    return;
+  }
 
   const totalPages = Math.ceil(allPosts.length / PAGE_SIZE);
 
@@ -238,10 +272,7 @@ export async function initPostsSection() {
     });
   }
 
-  // Render trang đầu tiên ngay lập tức
-  renderPage(0);
-
-  // Cố gắng tải dữ liệu động từ WordPress REST API
+  // Tải dữ liệu động từ WordPress REST API
   try {
     const url = `${CONFIG.wpApi.endpoint}?categories=${CONFIG.wpApi.categoryId}&per_page=12&_embed`;
     const controller = new AbortController();
@@ -256,7 +287,7 @@ export async function initPostsSection() {
     if (response.ok) {
       const rawData = await response.json();
       if (Array.isArray(rawData) && rawData.length > 0) {
-        // Chuẩn hóa bài viết từ WordPress
+        // Có bài viết từ WordPress, chuẩn hóa dữ liệu
         const wpPosts = rawData.map((post, idx) => {
           const title = sanitizeText(post.title?.rendered || 'Bài viết SnakeMedia');
           let excerpt = sanitizeText(post.excerpt?.rendered || '');
@@ -290,11 +321,19 @@ export async function initPostsSection() {
         // Gán danh sách bài viết từ WordPress
         allPosts = wpPosts;
         renderPage(0);
+      } else {
+        // API trả về OK nhưng không có bài viết
+        console.info('[SnakeMedia Posts] Không có bài viết trong category 211');
+        renderEmptyState();
       }
+    } else {
+      // API lỗi hoặc không khả dụng
+      console.info('[SnakeMedia Posts] API không khả dụng, hiển thị empty state');
+      renderEmptyState();
     }
   } catch (err) {
-    console.info('[SnakeMedia Posts] WordPress fetch skipped or fallback active:', err.message);
-    // Giữ nguyên default mockup posts (đã hiển thị đẹp mắt)
+    console.info('[SnakeMedia Posts] Lỗi khi load bài viết:', err.message);
+    renderEmptyState();
   }
 }
 
