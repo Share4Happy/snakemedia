@@ -7,10 +7,10 @@ export const CONFIG = {
   siteName: 'SnakeMedia',
   siteUrl: import.meta.env?.VITE_SITE_URL || 'https://username.github.io/snakemedia',
 
-  // WordPress REST API (Chuyên mục 208)
+  // WordPress REST API (Chuyên mục 211)
   wpApi: {
     endpoint: import.meta.env?.VITE_WP_API_URL || 'https://share4happy.com/wp-json/wp/v2/posts',
-    categoryId: Number(import.meta.env?.VITE_WP_CATEGORY_ID || 208),
+    categoryId: Number(import.meta.env?.VITE_WP_CATEGORY_ID || 211),
     perPage: Number(import.meta.env?.VITE_WP_POSTS_PER_PAGE || 5),
     requestTimeoutMs: 10000
   },
